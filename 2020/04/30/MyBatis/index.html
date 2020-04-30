@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="idea,jdbc,mybatis,xml," />
 
 
 
@@ -79,14 +79,22 @@
 
 
 
-<meta name="description" content="好想爱这个世界啊">
-<meta property="og:type" content="website">
-<meta property="og:title" content="只只">
-<meta property="og:url" content="https://getoutro.github.io/index.html">
+<meta name="description" content="学习一下MyBatis1、MyBatis介绍Mybatis:    用来和数据库进行交互，持久化层框架(SQL映射框架)； 1)、从原始的JDBC—–&gt;dbutils(QueryRunner)——&gt;JdbcTemplate—–&gt;xxx ​    称为工具； ​    工具：一些功能的简单封装 ​    框架：某个领域的整体解决方案；缓存，考虑异常的处理问题，考虑部分字段映射问题…">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在idea下实现MyBatis的helloworld">
+<meta property="og:url" content="https://getoutro.github.io/2020/04/30/MyBatis/index.html">
 <meta property="og:site_name" content="只只">
-<meta property="og:description" content="好想爱这个世界啊">
+<meta property="og:description" content="学习一下MyBatis1、MyBatis介绍Mybatis:    用来和数据库进行交互，持久化层框架(SQL映射框架)； 1)、从原始的JDBC—–&gt;dbutils(QueryRunner)——&gt;JdbcTemplate—–&gt;xxx ​    称为工具； ​    工具：一些功能的简单封装 ​    框架：某个领域的整体解决方案；缓存，考虑异常的处理问题，考虑部分字段映射问题…">
+<meta property="og:image" content="http://s1.wailian.download/2020/04/30/mybatis_helloworld.png">
+<meta property="article:published_time" content="2020-04-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2020-04-30T11:45:26.044Z">
 <meta property="article:author" content="hch">
+<meta property="article:tag" content="idea">
+<meta property="article:tag" content="jdbc">
+<meta property="article:tag" content="mybatis">
+<meta property="article:tag" content="xml">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://s1.wailian.download/2020/04/30/mybatis_helloworld.png">
 
 
 
@@ -116,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="https://getoutro.github.io/"/>
+  <link rel="canonical" href="https://getoutro.github.io/2020/04/30/MyBatis/"/>
 
 
 
 
 
-  <title>只只</title>
+  <title>在idea下实现MyBatis的helloworld | 只只</title>
   
 
 
@@ -141,8 +149,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,173 +252,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://getoutro.github.io/2020/04/30/%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8BORM/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="只只">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/30/%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8BORM/" itemprop="url">什么是ORM(Object Relational Mapping)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-30T00:00:00+08:00">
-                2020-04-30
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/" itemprop="url" rel="index">
-                    <span itemprop="name">数据库</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="什么是ORM？为什么要用ORM？"><a href="#什么是ORM？为什么要用ORM？" class="headerlink" title="什么是ORM？为什么要用ORM？"></a>什么是ORM？为什么要用ORM？</h1><p>在了解ORM之前，应该先了解下面的概念：</p>
-<h2 id="1、什么是“持久化-Persistence-”"><a href="#1、什么是“持久化-Persistence-”" class="headerlink" title="1、什么是“持久化(Persistence)”"></a>1、什么是“持久化(Persistence)”</h2><p>把数据（如内存中的对象）保存到可以永久保存的存储设备中（比如计算机的硬盘），持久化的作用就是将内容中的数据存储在关系型数据库中。</p>
-<h2 id="2、什么是“持久层-Persistence-Layer-”？"><a href="#2、什么是“持久层-Persistence-Layer-”？" class="headerlink" title="2、什么是“持久层(Persistence Layer)”？"></a>2、什么是“持久层(Persistence Layer)”？</h2><p>持久层专注于实现持久化应用领域的某个系统的一个逻辑层面，将数据使用者（软件开发人员）与数据库实体相关联。</p>
-<h2 id="3、什么是ROM？"><a href="#3、什么是ROM？" class="headerlink" title="3、什么是ROM？"></a>3、什么是ROM？</h2><p>ORM(Object Relational Mapping)对象关系映射，在关系型数据库和对象之间作一个映射，因此，在具体的操作数据库的时候，不需要和复杂的SQL语句打交道，只要像平时操作对象一样操作它就行了。</p>
-<h2 id="4、为什么要做持久化和ORM设计呢？"><a href="#4、为什么要做持久化和ORM设计呢？" class="headerlink" title="4、为什么要做持久化和ORM设计呢？"></a>4、为什么要做持久化和ORM设计呢？</h2><p>在当前的企业应用开发过程中，MVC为主要的系统架构模式，Model包含了复杂的业务逻辑和数据逻辑，以及数据存取机制(如 JDBC的连接、SQL的生成和 Statement创建、还有 ResultSet结果集的读取等)，将这些复杂的业务逻辑和数据逻辑分离，实际上就是降低系统代码的高耦合，因为开发过程中有很多代码涉及到对数据库的操作，降低代码的耦合度是迫切要做的内容，也是<strong>持久化</strong>要做的工作。MVC模式实现了架构上将View层（视图层）和Model层（数据处理层）分离的解耦合，持久化的设计实现了数据处理层内部的业务逻辑分离的解耦。ORM作为持久化设计中的最重要的也是最复杂的技术、是目前业界热点的技术。</p>
-<p>在传统的JDBC操作数据库有以下操作，数据和数据库存取逻辑是混杂在一起的</p>
-<p>1、建立数据库连接，获得Connection对象</p>
-<p>2、根据用户的输入组装查询的SQL语句</p>
-<p>3、根据SQL语句建立Statement对象或者PreparedStatement对象</p>
-<p>4、用Connection对象执行SQL语句，获得结果集ResltSet对象</p>
-<p>5、然后一条一条读取结果集ResultSet对象中的数据</p>
-<p>6、根据读取到的数据，按特定的业务逻辑进行计算</p>
-<p>7、根据计算得到的结果再组装更新SQL语句</p>
-<p>8、再使用Connection对象执行更新SQL语句，以更新数据中的数据</p>
-<p>9、最后还要关闭Statement对象和Connection对象</p>
-<p>从上面的步骤可以看出代码逻辑非常复杂，这其中还不包括某条执行失败的语句的处理逻辑。 其中的业务处理逻辑和数据存取逻辑完全混杂在一块。而一个完整的系统要包含成千上万个这样重复的而又混杂的处理过程，假如要对其中某些业务逻辑或者一些相关联的业务流程做修改，要改动的代码量将不可想象。另一方面，假如要换数据库 产品或者运行环境也可能是个不可能完成的任务。而用户的运行环境和要求却千差万别，我们不可能为每一个用户每一种运行环境设计一套一样的系统。 </p>
-<p>因此就要将一样的处理代码即业务逻辑和可能不一样的处理即数据存取逻辑分离开来，另一方面，关系型数据库中的数据基本都是以一行行的数据进行存取的，而程序运行却是一个个对象进行处理，而目前大部分数据库驱动技术（如ADO.NET、JDBC、ODBC等等）均是以行集的结果集一条条进行处理的。所以为解决 这一困难，就出现 ORM 这一个对象和数据之间映射技术。 </p>
-<p> 举例来说，比如要完成一个购物打折促销的程序，用 ORM 思想将如下实现（引自《深入浅出Hibernate》）：<br>业务逻辑如下： </p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Double <span class="title">calcAmount</span><span class="params">(String customerid, <span class="keyword">double</span> amount)</span> </span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">// 根据客户ID获得客户记录</span></span><br><span class="line">    Customer customer = CustomerManager.getCustomer(custmerid); </span><br><span class="line">    <span class="comment">// 根据客户等级获得打折规则</span></span><br><span class="line">    Promotion promotion = PromotionManager.getPromotion(customer.getLevel()); </span><br><span class="line">    <span class="comment">// 累积客户总消费额，并保存累计结果</span></span><br><span class="line">    customer.setSumAmount(customer.getSumAmount().add(amount); </span><br><span class="line">    CustomerManager.save(customer); </span><br><span class="line">    <span class="comment">// 返回打折后的金额</span></span><br><span class="line">    <span class="keyword">return</span> amount.multiply(protomtion.getRatio()); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p> 这样的代码就非常清晰了，而且与数据存取逻辑完全分离。设计业务逻辑代码的时候完全不需要考虑数据库JDBC的那些千篇一律的操作，而将它交给 CustomerManager 和 PromotionManager 两个类去完成。这就是一个简单的 ORM 设计，实际的 ORM 实现框架比这个要复杂的多。 </p>
-<hr>
-<p>转载自： <a href="https://blog.csdn.net/u010947534/article/details/90669452" target="_blank" rel="noopener">https://blog.csdn.net/u010947534/article/details/90669452</a> </p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
 
   
 
@@ -441,9 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/30/MyBatis/" itemprop="url">在idea下实现MyBatis的helloworld</a></h1>
+          <h1 class="post-title" itemprop="name headline">在idea下实现MyBatis的helloworld</h1>
         
 
         <div class="post-meta">
@@ -515,9 +356,7 @@
       
 
       
-        
-          
-            <h1 id="学习一下MyBatis"><a href="#学习一下MyBatis" class="headerlink" title="学习一下MyBatis"></a>学习一下MyBatis</h1><h2 id="1、MyBatis介绍"><a href="#1、MyBatis介绍" class="headerlink" title="1、MyBatis介绍"></a>1、MyBatis介绍</h2><p>Mybatis:    用来和数据库进行交互，持久化层框架(SQL映射框架)；</p>
+        <h1 id="学习一下MyBatis"><a href="#学习一下MyBatis" class="headerlink" title="学习一下MyBatis"></a>学习一下MyBatis</h1><h2 id="1、MyBatis介绍"><a href="#1、MyBatis介绍" class="headerlink" title="1、MyBatis介绍"></a>1、MyBatis介绍</h2><p>Mybatis:    用来和数据库进行交互，持久化层框架(SQL映射框架)；</p>
 <p>1)、从原始的JDBC—–&gt;dbutils(QueryRunner)——&gt;JdbcTemplate—–&gt;xxx</p>
 <p>​    称为工具；</p>
 <p>​    工具：一些功能的简单封装</p>
@@ -578,8 +417,6 @@
 <p>​            测试结果：</p>
 <p><img src="http://s1.wailian.download/2020/04/30/mybatis_helloworld.png" alt="mybatis_helloworld.png"></p>
 
-          
-        
       
     </div>
     
@@ -594,164 +431,46 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://getoutro.github.io/2020/04/29/vue%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8yarn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hch">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="只只">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/29/vue%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8yarn/" itemprop="url">vue下如何使用yarn</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-04-29T00:00:00+08:00">
-                2020-04-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E9%95%9C%E5%83%8F%E5%8A%A0%E9%80%9F/" itemprop="url" rel="index">
-                    <span itemprop="name">镜像加速</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/idea/" rel="tag"># idea</a>
           
-
+            <a href="/tags/jdbc/" rel="tag"># jdbc</a>
           
-            
+            <a href="/tags/mybatis/" rel="tag"># mybatis</a>
           
-
+            <a href="/tags/xml/" rel="tag"># xml</a>
           
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="vue-如何使用yarn"><a href="#vue-如何使用yarn" class="headerlink" title="vue 如何使用yarn"></a>vue 如何使用yarn</h2><h3 id="1-全局安装yarn"><a href="#1-全局安装yarn" class="headerlink" title="1.全局安装yarn"></a>1.全局安装yarn</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -g yarn</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="2-安装yarn的淘宝镜像"><a href="#2-安装yarn的淘宝镜像" class="headerlink" title="2.安装yarn的淘宝镜像"></a>2.安装yarn的淘宝镜像</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config set registry https:&#x2F;&#x2F;registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
-
-
-
-<p>后面将详细介绍如何搭建vue脚手架的过程</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/04/29/vue%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8yarn/" rel="next" title="vue下如何使用yarn">
+                <i class="fa fa-chevron-left"></i> vue下如何使用yarn
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/04/30/%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8BORM/" rel="prev" title="什么是ORM(Object Relational Mapping)">
+                什么是ORM(Object Relational Mapping) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -761,10 +480,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -772,6 +492,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -792,8 +516,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -857,6 +590,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#学习一下MyBatis"><span class="nav-number">1.</span> <span class="nav-text">学习一下MyBatis</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、MyBatis介绍"><span class="nav-number">1.1.</span> <span class="nav-text">1、MyBatis介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、HelloWorld"><span class="nav-number">1.2.</span> <span class="nav-text">2、HelloWorld</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1017,6 +766,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

@@ -81,12 +81,12 @@
 
 <meta name="description" content="什么是ORM？为什么要用ORM？在了解ORM之前，应该先了解下面的概念： 1、什么是“持久化(Persistence)”把数据（如内存中的对象）保存到可以永久保存的存储设备中（比如计算机的硬盘），持久化的作用就是将内容中的数据存储在关系型数据库中。 2、什么是“持久层(Persistence Layer)”？持久层专注于实现持久化应用领域的某个系统的一个逻辑层面，将数据使用者（软件开发人员）与数据">
 <meta property="og:type" content="article">
-<meta property="og:title" content="了解一下什么是ORM">
+<meta property="og:title" content="什么是ORM(Object Relational Mapping)">
 <meta property="og:url" content="https://getoutro.github.io/2020/04/30/%E4%BA%86%E8%A7%A3%E4%B8%80%E4%B8%8BORM/index.html">
 <meta property="og:site_name" content="只只">
 <meta property="og:description" content="什么是ORM？为什么要用ORM？在了解ORM之前，应该先了解下面的概念： 1、什么是“持久化(Persistence)”把数据（如内存中的对象）保存到可以永久保存的存储设备中（比如计算机的硬盘），持久化的作用就是将内容中的数据存储在关系型数据库中。 2、什么是“持久层(Persistence Layer)”？持久层专注于实现持久化应用领域的某个系统的一个逻辑层面，将数据使用者（软件开发人员）与数据">
 <meta property="article:published_time" content="2020-04-29T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-04-30T03:02:01.870Z">
+<meta property="article:modified_time" content="2020-04-30T11:39:51.337Z">
 <meta property="article:author" content="hch">
 <meta property="article:tag" content="orm">
 <meta property="article:tag" content="jdbc">
@@ -126,7 +126,7 @@
 
 
 
-  <title>了解一下什么是ORM | 只只</title>
+  <title>什么是ORM(Object Relational Mapping) | 只只</title>
   
 
 
@@ -280,7 +280,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">了解一下什么是ORM</h1>
+          <h1 class="post-title" itemprop="name headline">什么是ORM(Object Relational Mapping)</h1>
         
 
         <div class="post-meta">
@@ -355,8 +355,8 @@
         <h1 id="什么是ORM？为什么要用ORM？"><a href="#什么是ORM？为什么要用ORM？" class="headerlink" title="什么是ORM？为什么要用ORM？"></a>什么是ORM？为什么要用ORM？</h1><p>在了解ORM之前，应该先了解下面的概念：</p>
 <h2 id="1、什么是“持久化-Persistence-”"><a href="#1、什么是“持久化-Persistence-”" class="headerlink" title="1、什么是“持久化(Persistence)”"></a>1、什么是“持久化(Persistence)”</h2><p>把数据（如内存中的对象）保存到可以永久保存的存储设备中（比如计算机的硬盘），持久化的作用就是将内容中的数据存储在关系型数据库中。</p>
 <h2 id="2、什么是“持久层-Persistence-Layer-”？"><a href="#2、什么是“持久层-Persistence-Layer-”？" class="headerlink" title="2、什么是“持久层(Persistence Layer)”？"></a>2、什么是“持久层(Persistence Layer)”？</h2><p>持久层专注于实现持久化应用领域的某个系统的一个逻辑层面，将数据使用者（软件开发人员）与数据库实体相关联。</p>
-<h2 id="3、什么是ROM？"><a href="#3、什么是ROM？" class="headerlink" title="3、什么是ROM？"></a>3、什么是ROM？</h2><p>ORM(Object-Relational Mapping)对象关系映射，在关系型数据库和对象之间作一个映射，因此，在具体的操作数据库的时候，不需要和复杂的SQL语句打交道，只要像平时操作对象一样操作它就行了。</p>
-<h2 id="4、为什么要做持久化和ORM设计呢？"><a href="#4、为什么要做持久化和ORM设计呢？" class="headerlink" title="4、为什么要做持久化和ORM设计呢？"></a>4、为什么要做持久化和ORM设计呢？</h2><p>在当前的企业应用开发过程中，MVC为主要的系统架构模式，model包含了复杂的业务逻辑和数据逻辑，以及数据存取机制(如 JDBC的连接、SQL的生成和 Statement创建、还有 ResultSet结果集的读取等)，将这些复杂的业务逻辑和数据逻辑分离，实际上就是降低系统代码的高耦合，因为开发过程中有很多代码涉及到对数据库的操作，降低代码的耦合度是迫切要做的内容，也是<strong>持久化</strong>要做的工作。MVC模式实现了架构上将View层（视图层）和Model层（数据处理层）分离的解耦合，持久化的设计实现了数据处理层内部的业务逻辑分离的解耦。ORM作为持久化设计中的最重要的也是最复杂的技术、是目前业界热点的技术。</p>
+<h2 id="3、什么是ROM？"><a href="#3、什么是ROM？" class="headerlink" title="3、什么是ROM？"></a>3、什么是ROM？</h2><p>ORM(Object Relational Mapping)对象关系映射，在关系型数据库和对象之间作一个映射，因此，在具体的操作数据库的时候，不需要和复杂的SQL语句打交道，只要像平时操作对象一样操作它就行了。</p>
+<h2 id="4、为什么要做持久化和ORM设计呢？"><a href="#4、为什么要做持久化和ORM设计呢？" class="headerlink" title="4、为什么要做持久化和ORM设计呢？"></a>4、为什么要做持久化和ORM设计呢？</h2><p>在当前的企业应用开发过程中，MVC为主要的系统架构模式，Model包含了复杂的业务逻辑和数据逻辑，以及数据存取机制(如 JDBC的连接、SQL的生成和 Statement创建、还有 ResultSet结果集的读取等)，将这些复杂的业务逻辑和数据逻辑分离，实际上就是降低系统代码的高耦合，因为开发过程中有很多代码涉及到对数据库的操作，降低代码的耦合度是迫切要做的内容，也是<strong>持久化</strong>要做的工作。MVC模式实现了架构上将View层（视图层）和Model层（数据处理层）分离的解耦合，持久化的设计实现了数据处理层内部的业务逻辑分离的解耦。ORM作为持久化设计中的最重要的也是最复杂的技术、是目前业界热点的技术。</p>
 <p>在传统的JDBC操作数据库有以下操作，数据和数据库存取逻辑是混杂在一起的</p>
 <p>1、建立数据库连接，获得Connection对象</p>
 <p>2、根据用户的输入组装查询的SQL语句</p>
@@ -407,8 +407,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2020/04/29/vue%E4%B8%8B%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8yarn/" rel="next" title="vue下如何使用yarn">
-                <i class="fa fa-chevron-left"></i> vue下如何使用yarn
+              <a href="/2020/04/30/MyBatis/" rel="next" title="在idea下实现MyBatis的helloworld">
+                <i class="fa fa-chevron-left"></i> 在idea下实现MyBatis的helloworld
               </a>
             
           </div>
@@ -496,7 +496,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -518,7 +518,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
