@@ -360,9 +360,11 @@
 <p><strong>Collection</strong></p>
 <p>子接口：</p>
 <p>​     |– <strong>List</strong>：特点：元素是有序的（怎么存入，怎么取出），元素可以重复。因为该集合体系有索引       </p>
-<pre><code>常用实现类：</code></pre><p>​                 |–：<strong>ArrayList</strong>:底层的数据结构使用的是数组结构    特点：查询速度快，但是添加和删除元素慢，线程                                            不同步                  </p>
-<p>​                 |–：<strong>LinkedList</strong>：底层使用的是链表数据结构      特点：查询速度慢，增删速度快        </p>
-<pre><code>|--：**Vector**：底层是数组数据结构，jdk1.0中提供的，vector是线程同步的，无论增删还是查询都慢，                                           被 ArrayList取代，多线程可以用锁，也不用vector</code></pre><p>​    |–<strong>Set</strong>：元素是无序的，元素不重复</p>
+<p>​                常用实现类：</p>
+<p>​                 <strong>ArrayList</strong>:底层的数据结构使用的是数组结构    特点：查询速度快，但是添加和删除元素慢，线程                                            不同步                  </p>
+<p>​                <strong>LinkedList</strong>：底层使用的是链表数据结构      特点：查询速度慢，增删速度快</p>
+<p>​                 <strong>Vector</strong>：底层是数组数据结构，Vector是线程同步的，无论增删还是查询都慢</p>
+<p>​    |–<strong>Set</strong>：元素是无序的，元素不重复</p>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>List特有方法，凡是可以操作角标的方法都是体系特有的方法</p>
 <ul>
 <li><p>增</p>
