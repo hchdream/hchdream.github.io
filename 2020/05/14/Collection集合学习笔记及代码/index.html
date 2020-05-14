@@ -85,16 +85,16 @@
 <meta property="og:url" content="https://getoutro.github.io/2020/05/14/Collection%E9%9B%86%E5%90%88%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E5%8F%8A%E4%BB%A3%E7%A0%81/index.html">
 <meta property="og:site_name" content="只只">
 <meta property="og:description" content="CollectionInterface Collection 来自java.util包下，是非常实用的数据结构，字面意思是容器。 JDK中的描述：它是集合层次结构根接口。一个集合代表一组对象，被称为元素。一些集合允许重复的元素，而其他的则不允许。有些是有序和无序的人。JDK没有提供这个接口的任何直接的实现：它提供更具体的子接口像  Set和 List实现。此接口通常用于通过收集和操纵他们最大的共性">
-<meta property="og:image" content="https://img-blog.csdn.net/20180708081514823?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4NzYxNzY3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="http://s1.wailian.download/2020/05/14/SFP4H5BKPKWYKCS4M2SKO.png">
 <meta property="article:published_time" content="2020-05-13T16:00:00.000Z">
-<meta property="article:modified_time" content="2020-05-14T02:43:32.485Z">
+<meta property="article:modified_time" content="2020-05-14T02:51:37.534Z">
 <meta property="article:author" content="hch">
 <meta property="article:tag" content="Collection">
 <meta property="article:tag" content="List">
 <meta property="article:tag" content="Set">
 <meta property="article:tag" content="泛型">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://img-blog.csdn.net/20180708081514823?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4NzYxNzY3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta name="twitter:image" content="http://s1.wailian.download/2020/05/14/SFP4H5BKPKWYKCS4M2SKO.png">
 
 
 
@@ -359,13 +359,13 @@
         <h1 id="Collection"><a href="#Collection" class="headerlink" title="Collection"></a>Collection</h1><p>Interface Collection<E> 来自java.util包下，是非常实用的数据结构，字面意思是容器。</p>
 <p>JDK中的描述：它是集合层次结构根接口。一个集合代表一组对象，被称为元素。一些集合允许重复的元素，而其他的则不允许。有些是有序和无序的人。JDK没有提供这个接口的任何直接的实现：它提供更具体的子接口像  <code>Set</code>和 <code>List</code>实现。此接口通常用于通过收集和操纵他们最大的共性是理想。</p>
 <p><strong>Collection的继承实现体系图</strong></p>
-<p>  <img src="https://img-blog.csdn.net/20180708081514823?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI4NzYxNzY3/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="集合继承实现体系图">  </p>
+<p><img src="http://s1.wailian.download/2020/05/14/SFP4H5BKPKWYKCS4M2SKO.png" alt="SFP4H5BKPKWYKCS4M2SKO.png">  </p>
 <p><strong>Collection</strong></p>
 <p>子接口：</p>
 <p>​     |– <strong>List</strong>：特点：元素是有序的（怎么存入，怎么取出），元素可以重复。因为该集合体系有索引       </p>
 <pre><code>常用实现类：</code></pre><p>​                 |–：<strong>ArrayList</strong>:底层的数据结构使用的是数组结构    特点：查询速度快，但是添加和删除元素慢，线程                                            不同步                  </p>
 <p>​                 |–：<strong>LinkedList</strong>：底层使用的是链表数据结构      特点：查询速度慢，增删速度快        </p>
-<pre><code>|--：**Vector**：底层是数组数据结构，jdk1.0中提供的，vector是线程同步的，无论增删还是查询都慢，被                          ArrayList取代，多线程可以用锁，也不用vector</code></pre><p>​    |–<strong>Set</strong>：元素是无序的，元素不重复</p>
+<pre><code>|--：**Vector**：底层是数组数据结构，jdk1.0中提供的，vector是线程同步的，无论增删还是查询都慢，                                           被 ArrayList取代，多线程可以用锁，也不用vector</code></pre><p>​    |–<strong>Set</strong>：元素是无序的，元素不重复</p>
 <h2 id="List"><a href="#List" class="headerlink" title="List"></a>List</h2><p>List特有方法，凡是可以操作角标的方法都是体系特有的方法</p>
 <ul>
 <li><p>增</p>
